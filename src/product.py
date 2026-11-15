@@ -30,7 +30,7 @@ class Product:
         self.__price = new_price
 
     @classmethod
-    def new_product(cls, product_data: dict, products_list: list = None) -> 'Product':
+    def new_product(cls, product_data: dict, products_list: list = None) -> "Product":
         """
         Создает новый объект Product или обновляет существующий.
         """

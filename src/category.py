@@ -13,4 +13,3 @@ class Category:
         # Автоматическое обновление атрибутов класса при создании объекта
         Category.category_count += 1
         Category.product_count += len(self.products)
-

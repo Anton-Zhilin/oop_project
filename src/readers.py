@@ -1,8 +1,8 @@
 import json
 import os
 
-from src.product import Product
 from src.category import Category
+from src.product import Product
 
 
 def load_products_from_json(file_path: str) -> list[Category]:
@@ -10,7 +10,7 @@ def load_products_from_json(file_path: str) -> list[Category]:
     Читает данные из JSON-файла и создает объекты классов Category и Product.
     """
     # Открываем файл для чтения с правильной кодировкой
-    with open(file_path, 'r', encoding='utf-8') as file:
+    with open(file_path, "r", encoding="utf-8") as file:
         data = json.load(file)
 
     categories = []
@@ -23,14 +23,12 @@ def load_products_from_json(file_path: str) -> list[Category]:
                 name=product_data["name"],
                 description=product_data["description"],
                 price=product_data["price"],
-                quantity=product_data["quantity"]
+                quantity=product_data["quantity"],
             )
             products_list.append(product)
 
         category = Category(
-            name=category_data["name"],
-            description=category_data["description"],
-            products=products_list
+            name=category_data["name"], description=category_data["description"], products=products_list
         )
         categories.append(category)
 

@@ -1,6 +1,5 @@
 import pytest
 
-from src.category import Category
 from src.product import Product
 
 
@@ -14,19 +13,51 @@ def test_product_initialization():
     assert product.quantity == 5
 
 
-def test_product_count():
-    """Проверка подсчета количества продуктов (атрибут класса product_count)."""
-    # Изначально счетчик сброшен фикстурой и равен 0
-    assert Category.product_count == 0
+def test_new_product_creation():
+    """Проверка создания нового товара через класс-метод new_product."""
+    data = {"name": "New Phone", "description": "Desc", "price": 50000.0, "quantity": 2}
+    product = Product.new_product(data, [])
 
-    prod1 = Product("Prod1", "Desc1", 10.0, 1)
-    prod2 = Product("Prod2", "Desc2", 20.0, 2)
+    assert product.name == "New Phone"
+    assert product.price == 50000.0
+    assert product.quantity == 2
 
-    # Создаем категорию с 2 товарами
-    Category("Cat1", "Desc1", [prod1, prod2])
-    assert Category.product_count == 2
 
-    # Создаем еще одну категорию с 1 товаром
-    prod3 = Product("Prod3", "Desc3", 30.0, 3)
-    Category("Cat2", "Desc2", [prod3])
-    assert Category.product_count == 3  # 2 + 1 = 3
+def test_new_product_merge():
+    """Проверка объединения товаров с одинаковым именем в new_product."""
+    data1 = {"name": "Phone", "description": "Desc", "price": 10000.0, "quantity": 5}
+    data2 = {"name": "Phone", "description": "Desc", "price": 12000.0, "quantity": 3}
+
+    p1 = Product.new_product(data1, [])
+    products_list = [p1]
+
+    p2 = Product.new_product(data2, products_list)
+
+    # Должен вернуться тот же объект
+    assert p1 is p2
+    # Количество должно сложиться
+    assert p1.quantity == 8
+    # Цена должна обновиться на более высокую
+    assert p1.price == 12000.0
+
+
+def test_price_setter_valid():
+    """Проверка установки валидной цены через сеттер."""
+    product = Product("Test", "Desc", 100.0, 5)
+    product.price = 150.0
+    assert product.price == 150.0
+
+
+def test_price_setter_invalid(capsys):
+    """Проверка блокировки нулевой или отрицательной цены."""
+    product = Product("Test", "Desc", 100.0, 5)
+
+    # Пытаемся установить отрицательную цену
+    product.price = -10.0
+
+    # Проверяем, что цена не изменилась
+    assert product.price == 100.0
+
+    # Проверяем, что в консоль вывелось нужное сообщение
+    captured = capsys.readouterr()
+    assert "Цена не должна быть нулевая или отрицательная" in captured.out

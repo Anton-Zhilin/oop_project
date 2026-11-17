@@ -24,8 +24,18 @@ class Category:
     def products(self) -> str:
         """
         Геттер для приватного атрибута __products.
+        Оптимизирован: использует __str__ каждого продукта.
         """
         result = ""
         for product in self.__products:
-            result += f"{product.name}, {product.price} руб. Остаток: {product.quantity} шт.\n"
+            result += str(product) + "\n"
         return result
+
+    def __str__(self) -> str:
+        """
+        Строковое представление категории.
+        Формат: "Название категории, количество продуктов: X шт."
+        где X - сумма всех quantity товаров на складе.
+        """
+        total_quantity = sum(product.quantity for product in self.__products)
+        return f"{self.name}, количество продуктов: {total_quantity} шт."

@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ae653e3-a633-4a89-b2d6-1ad5fedefe88" name="Changes" comment="changed category.py">
-      <change beforePath="$PROJECT_DIR$/.idea/oop-project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/oop-project.iml" afterDir="false" />
+    <list default="true" id="3ae653e3-a633-4a89-b2d6-1ad5fedefe88" name="Changes" comment="changed category.py and product.py">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/category.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/category.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/product.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/product.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_category.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_category.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_product.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_product.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +73,7 @@
       <recent name="C:\Users\User\PycharmProjects\oop_project\data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python tests.Python tests in test_category.py">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="oop-project" />
       <option name="ENV_FILES" value="" />
@@ -152,10 +151,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
         <item itemvalue="Python tests.Python tests in test_category.py" />
-        <item itemvalue="Python tests.Python tests for tests.test_product.test_new_product_merge" />
         <item itemvalue="Python tests.Python tests in test_product.py" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python tests.Python tests for tests.test_product.test_new_product_merge" />
         <item itemvalue="Python tests.Python tests in test_product.py" />
       </list>
     </recent_temporary>
@@ -263,7 +262,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794775401964</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="changed category.py and product.py">
+      <option name="closed" value="true" />
+      <created>1794946824405</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1794946824405</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,6 +298,7 @@
     <MESSAGE value="change main.py" />
     <MESSAGE value="changed product.py" />
     <MESSAGE value="changed category.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed category.py" />
+    <MESSAGE value="changed category.py and product.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed category.py and product.py" />
   </component>
 </project>

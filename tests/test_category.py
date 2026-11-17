@@ -50,3 +50,17 @@ def test_category_count():
 
     Category("Cat2", "Desc2", [])
     assert Category.category_count == 2
+
+
+# НОВЫЙ ТЕСТ (для __str__)
+
+def test_category_str():
+    """Проверка строкового представления категории (__str__)."""
+    p1 = Product("Смартфон", "Описание", 50000.0, 10)
+    p2 = Product("Ноутбук", "Описание", 120000.0, 5)
+
+    category = Category("Электроника", "Техника", [p1, p2])
+
+    # Сумма quantity: 10 + 5 = 15
+    expected_str = "Электроника, количество продуктов: 15 шт."
+    assert str(category) == expected_str

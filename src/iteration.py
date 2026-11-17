@@ -23,4 +23,3 @@ class CategoryIterator:
         else:
             # Если товары закончились, прерываем итерацию
             raise StopIteration
-

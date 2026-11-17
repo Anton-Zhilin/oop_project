@@ -65,6 +65,7 @@ def test_price_setter_invalid(capsys):
 
 # НОВЫЕ ТЕСТЫ (для __str__ и __add__)
 
+
 def test_product_str():
     """Проверка строкового представления товара (__str__)."""
     product = Product("Смартфон", "Мощный смартфон", 50000.0, 10)
@@ -80,5 +81,3 @@ def test_product_add():
 
     # 50000 * 10 + 120000 * 5 = 500000 + 600000 = 1100000
     assert p1 + p2 == 1100000.0
-
-

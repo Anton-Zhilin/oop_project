@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ae653e3-a633-4a89-b2d6-1ad5fedefe88" name="Changes" comment="added new tests" />
+    <list default="true" id="3ae653e3-a633-4a89-b2d6-1ad5fedefe88" name="Changes" comment="added new class CategoryIterator">
+      <change beforePath="$PROJECT_DIR$/src/iteration.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/iteration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_category.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_category.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_product.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_product.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,6 +56,7 @@
     "Python tests.Python tests for tests.test_product.test_new_product_merge.executor": "Run",
     "Python tests.Python tests in test_category.py.executor": "Run",
     "Python tests.Python tests in test_product.py.executor": "Run",
+    "Python.iteration.executor": "Run",
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -298,7 +303,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794947243463</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="added new class CategoryIterator">
+      <option name="closed" value="true" />
+      <created>1794947869148</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1794947869148</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,6 +341,7 @@
     <MESSAGE value="changed category.py" />
     <MESSAGE value="changed category.py and product.py" />
     <MESSAGE value="added new tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="added new tests" />
+    <MESSAGE value="added new class CategoryIterator" />
+    <option name="LAST_COMMIT_MESSAGE" value="added new class CategoryIterator" />
   </component>
 </project>

@@ -19,14 +19,6 @@ class Product:
             print("Цена не должна быть нулевая или отрицательная")
             return
 
-        # Если нужно подтверждение при понижении цены (может мешать тестам):
-        # current_price = getattr(self, '_Product__price', None)
-        # if current_price is not None and new_price < current_price:
-        #     user_input = input(f"Цена понижается с {current_price} до {new_price}. Подтвердите (y/n): ")
-        #     if user_input.strip().lower() != 'y':
-        #         print("Отмена изменения цены.")
-        #         return
-
         self.__price = new_price
 
     @classmethod
@@ -50,3 +42,20 @@ class Product:
 
         # Создаём новый объект через конструктор
         return cls(name, description, price, quantity)
+
+    def __str__(self) -> str:
+        """
+        Строковое представление товара.
+        Формат: "Название продукта, X руб. Остаток: X шт."
+        """
+        return f"{self.name}, {self.price} руб. Остаток: {self.quantity} шт."
+
+    def __add__(self, other: "Product") -> float:
+        """
+        Сложение двух товаров: возвращает общую стоимость всех товаров на складе.
+        Формула: (price1 * quantity1) + (price2 * quantity2)
+        """
+        if not isinstance(other, Product):
+            raise TypeError("Можно складывать только объекты класса Product")
+
+        return (self.price * self.quantity) + (other.price * other.quantity)

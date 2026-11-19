@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ae653e3-a633-4a89-b2d6-1ad5fedefe88" name="Changes" comment="changed category.py">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
+    <list default="true" id="3ae653e3-a633-4a89-b2d6-1ad5fedefe88" name="Changes" comment="added new class CategoryIterator">
+      <change beforePath="$PROJECT_DIR$/src/iteration.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/iteration.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_category.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_category.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_product.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_product.py" afterDir="false" />
     </list>
@@ -25,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develope" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -57,12 +56,13 @@
     "Python tests.Python tests for tests.test_product.test_new_product_merge.executor": "Run",
     "Python tests.Python tests in test_category.py.executor": "Run",
     "Python tests.Python tests in test_product.py.executor": "Run",
+    "Python.iteration.executor": "Run",
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "feature/homework__14__2",
+    "git-widget-placeholder": "feature/homework__15__1",
     "last_opened_file_path": "C:/Users/User/PycharmProjects/oop_project/data",
     "node.js.detected.package.jshint": "true",
     "node.js.selected.package.jshint": "",
@@ -74,7 +74,31 @@
       <recent name="C:\Users\User\PycharmProjects\oop_project\data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests in test_category.py">
+  <component name="RunManager" selected="Python.iteration">
+    <configuration name="iteration" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="oop-project" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/iteration.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="oop-project" />
       <option name="ENV_FILES" value="" />
@@ -152,11 +176,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.iteration" />
         <item itemvalue="Python tests.Python tests in test_category.py" />
-        <item itemvalue="Python tests.Python tests for tests.test_product.test_new_product_merge" />
         <item itemvalue="Python tests.Python tests in test_product.py" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python tests.Python tests in test_product.py" />
+        <item itemvalue="Python tests.Python tests for tests.test_product.test_new_product_merge" />
       </list>
     </recent_temporary>
   </component>
@@ -263,7 +287,31 @@
       <option name="project" value="LOCAL" />
       <updated>1794775401964</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="changed category.py and product.py">
+      <option name="closed" value="true" />
+      <created>1794946824405</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1794946824405</updated>
+    </task>
+    <task id="LOCAL-00013" summary="added new tests">
+      <option name="closed" value="true" />
+      <created>1794947243463</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1794947243463</updated>
+    </task>
+    <task id="LOCAL-00014" summary="added new class CategoryIterator">
+      <option name="closed" value="true" />
+      <created>1794947869148</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1794947869148</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,6 +339,9 @@
     <MESSAGE value="change main.py" />
     <MESSAGE value="changed product.py" />
     <MESSAGE value="changed category.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed category.py" />
+    <MESSAGE value="changed category.py and product.py" />
+    <MESSAGE value="added new tests" />
+    <MESSAGE value="added new class CategoryIterator" />
+    <option name="LAST_COMMIT_MESSAGE" value="added new class CategoryIterator" />
   </component>
 </project>

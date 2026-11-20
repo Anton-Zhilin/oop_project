@@ -1,6 +1,6 @@
 import pytest
 
-from src.product import Product
+from src.product import Product, Smartphone, LawnGrass
 
 
 def test_product_initialization():
@@ -75,9 +75,40 @@ def test_product_str():
 
 
 def test_product_add():
-    """Проверка магического метода сложения (__add__)."""
+    """Проверка магического метода сложения (__add__) для одинаковых классов."""
     p1 = Product("Смартфон", "Описание", 50000.0, 10)
     p2 = Product("Ноутбук", "Описание", 120000.0, 5)
 
-    # 50000 * 10 + 120000 * 5 = 500000 + 600000 = 1100000
+    # Оба объекта класса Product, сложение разрешено
     assert p1 + p2 == 1100000.0
+
+
+def test_smartphone_add():
+    """Проверка сложения для наследников (Smartphone + Smartphone)."""
+    s1 = Smartphone("iPhone", "Описание", 100000.0, 2, 90.0, "15", 256, "Gray")
+    s2 = Smartphone("Samsung", "Описание", 80000.0, 3, 85.0, "S23", 512, "Black")
+
+    # 100000*2 + 80000*3 = 200000 + 240000 = 440000
+    assert s1 + s2 == 440000.0
+
+
+def test_product_add_different_classes_type_error():
+    """
+    Проверка, что __add__ вызывает TypeError при сложении разных классов продуктов.
+    """
+    s1 = Smartphone("iPhone", "Описание", 100000.0, 2, 90.0, "15", 256, "Gray")
+    g1 = LawnGrass("Трава", "Описание", 500.0, 100, "Россия", "14 дней", "Зеленый")
+
+    with pytest.raises(TypeError):
+        s1 + g1
+
+
+def test_product_add_parent_and_child_type_error():
+    """
+    Проверка, что нельзя сложить даже родителя и наследника (Product и Smartphone).
+    """
+    p1 = Product("Зарядка", "Описание", 1000.0, 10)
+    s1 = Smartphone("iPhone", "Описание", 100000.0, 2, 90.0, "15", 256, "Gray")
+
+    with pytest.raises(TypeError):
+        p1 + s1

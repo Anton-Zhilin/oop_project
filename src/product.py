@@ -53,10 +53,11 @@ class Product:
     def __add__(self, other: "Product") -> float:
         """
         Сложение двух товаров: возвращает общую стоимость всех товаров на складе.
-        Формула: (price1 * quantity1) + (price2 * quantity2)
+        Складывать можно только товары одинаковых классов.
         """
-        if not isinstance(other, Product):
-            raise TypeError("Можно складывать только объекты класса Product")
+        # Строгая проверка типов с помощью type()
+        if type(self) != type(other):
+            raise TypeError("Можно складывать только товары одинаковых классов")
 
         return (self.price * self.quantity) + (other.price * other.quantity)
 

@@ -65,8 +65,17 @@ class Product:
 class Smartphone(Product):
     """Класс, представляющий смартфон (наследник Product)."""
 
-    def __init__(self, name: str, description: str, price: float, quantity: int,
-                 efficiency: float, model: str, memory: float, color: str) -> None:
+    def __init__(
+        self,
+        name: str,
+        description: str,
+        price: float,
+        quantity: int,
+        efficiency: float,
+        model: str,
+        memory: float,
+        color: str,
+    ) -> None:
         # Вызываем конструктор родительского класса для инициализации общих полей
         super().__init__(name, description, price, quantity)
 
@@ -80,8 +89,16 @@ class Smartphone(Product):
 class LawnGrass(Product):
     """Класс, представляющий газонную траву (наследник Product)."""
 
-    def __init__(self, name: str, description: str, price: float, quantity: int,
-                 country: str, germination_period: str, color: str) -> None:
+    def __init__(
+        self,
+        name: str,
+        description: str,
+        price: float,
+        quantity: int,
+        country: str,
+        germination_period: str,
+        color: str,
+    ) -> None:
         # Вызываем конструктор родительского класса
         super().__init__(name, description, price, quantity)
 

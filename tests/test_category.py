@@ -1,8 +1,7 @@
 import pytest
 
-
 from src.category import Category
-from src.product import Product, Smartphone, LawnGrass
+from src.product import LawnGrass, Product, Smartphone
 
 
 def test_category_initialization():
@@ -110,5 +109,3 @@ def test_add_product_invalid_type():
         category.add_product("Это строка, а не продукт")
 
     assert "Нельзя добавить объект типа str" in str(exc_info.value)
-
-

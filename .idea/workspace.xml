@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ae653e3-a633-4a89-b2d6-1ad5fedefe88" name="Changes" comment="added new classes Smartphone and LawnGrass">
-      <change beforePath="$PROJECT_DIR$/src/product.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/product.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_product.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_product.py" afterDir="false" />
+    <list default="true" id="3ae653e3-a633-4a89-b2d6-1ad5fedefe88" name="Changes" comment="change __add__ function">
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/category.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/category.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_category.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_category.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +72,7 @@
       <recent name="C:\Users\User\PycharmProjects\oop_project\data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests in test_product.py">
+  <component name="RunManager" selected="Python tests.Python tests in test_category.py">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="oop-project" />
       <option name="ENV_FILES" value="" />
@@ -149,9 +150,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests in test_product.py" />
         <item itemvalue="Python tests.Python tests in test_category.py" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python tests.Python tests in test_product.py" />
         <item itemvalue="Python tests.Python tests in test_product.py" />
         <item itemvalue="Python tests.Python tests in test_category.py" />
       </list>
@@ -244,7 +245,15 @@
       <option name="project" value="LOCAL" />
       <updated>1795205627176</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="change __add__ function">
+      <option name="closed" value="true" />
+      <created>1795206209032</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1795206209032</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,6 +280,7 @@
     <MESSAGE value="refactoring with linters and test coverage" />
     <MESSAGE value="added new class CategoryIterator" />
     <MESSAGE value="added new classes Smartphone and LawnGrass" />
-    <option name="LAST_COMMIT_MESSAGE" value="added new classes Smartphone and LawnGrass" />
+    <MESSAGE value="change __add__ function" />
+    <option name="LAST_COMMIT_MESSAGE" value="change __add__ function" />
   </component>
 </project>

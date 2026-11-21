@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ae653e3-a633-4a89-b2d6-1ad5fedefe88" name="Changes" comment="add coverage">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlcov/class_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/htmlcov/class_index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlcov/function_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/htmlcov/function_index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlcov/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/htmlcov/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlcov/status.json" beforeDir="false" afterPath="$PROJECT_DIR$/htmlcov/status.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlcov/z_145eef247bfb46b6_category_py.html" beforeDir="false" afterPath="$PROJECT_DIR$/htmlcov/z_145eef247bfb46b6_category_py.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlcov/z_145eef247bfb46b6_product_py.html" beforeDir="false" afterPath="$PROJECT_DIR$/htmlcov/z_145eef247bfb46b6_product_py.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+    <list default="true" id="3ae653e3-a633-4a89-b2d6-1ad5fedefe88" name="Changes" comment="new coverage">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htmlcov/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/htmlcov/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -290,7 +284,15 @@
       <option name="project" value="LOCAL" />
       <updated>1795246415521</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="new coverage">
+      <option name="closed" value="true" />
+      <created>1795246922416</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1795246922416</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,6 +324,7 @@
     <MESSAGE value="Checked with linters" />
     <MESSAGE value="Change README.md" />
     <MESSAGE value="add coverage" />
-    <option name="LAST_COMMIT_MESSAGE" value="add coverage" />
+    <MESSAGE value="new coverage" />
+    <option name="LAST_COMMIT_MESSAGE" value="new coverage" />
   </component>
 </project>

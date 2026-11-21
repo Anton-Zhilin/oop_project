@@ -53,9 +53,56 @@ class Product:
     def __add__(self, other: "Product") -> float:
         """
         Сложение двух товаров: возвращает общую стоимость всех товаров на складе.
-        Формула: (price1 * quantity1) + (price2 * quantity2)
+        Складывать можно только товары одинаковых классов.
         """
-        if not isinstance(other, Product):
-            raise TypeError("Можно складывать только объекты класса Product")
+        # Строгая проверка типов с помощью type()
+        if type(self) != type(other):
+            raise TypeError("Можно складывать только товары одинаковых классов")
 
         return (self.price * self.quantity) + (other.price * other.quantity)
+
+
+class Smartphone(Product):
+    """Класс, представляющий смартфон (наследник Product)."""
+
+    def __init__(
+        self,
+        name: str,
+        description: str,
+        price: float,
+        quantity: int,
+        efficiency: float,
+        model: str,
+        memory: float,
+        color: str,
+    ) -> None:
+        # Вызываем конструктор родительского класса для инициализации общих полей
+        super().__init__(name, description, price, quantity)
+
+        # Инициализируем уникальные поля смартфона
+        self.efficiency = efficiency  # Производительность
+        self.model = model  # Модель
+        self.memory = memory  # Объем встроенной памяти
+        self.color = color  # Цвет
+
+
+class LawnGrass(Product):
+    """Класс, представляющий газонную траву (наследник Product)."""
+
+    def __init__(
+        self,
+        name: str,
+        description: str,
+        price: float,
+        quantity: int,
+        country: str,
+        germination_period: str,
+        color: str,
+    ) -> None:
+        # Вызываем конструктор родительского класса
+        super().__init__(name, description, price, quantity)
+
+        # Инициализируем уникальные поля травы
+        self.country = country  # Страна-производитель
+        self.germination_period = germination_period  # Срок прорастания
+        self.color = color  # Цвет

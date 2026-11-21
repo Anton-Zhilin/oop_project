@@ -1,7 +1,7 @@
 import pytest
 
 from src.category import Category
-from src.product import Product
+from src.product import LawnGrass, Product, Smartphone
 
 
 def test_category_initialization():
@@ -65,3 +65,47 @@ def test_category_str():
     # Сумма quantity: 10 + 5 = 15
     expected_str = "Электроника, количество продуктов: 15 шт."
     assert str(category) == expected_str
+
+
+def test_add_product_valid():
+    """Проверка добавления валидного продукта."""
+    category = Category("Test", "Desc", [])
+    product = Product("Phone", "Desc", 100.0, 5)
+
+    category.add_product(product)
+
+    assert Category.product_count == 1
+    assert "Phone" in category.products
+
+
+def test_add_product_smartphone():
+    """Проверка добавления наследника Smartphone."""
+    category = Category("Test", "Desc", [])
+    smartphone = Smartphone("iPhone", "Desc", 100000.0, 2, 90.0, "15", 256, "Gray")
+
+    category.add_product(smartphone)
+
+    assert Category.product_count == 1
+    assert "iPhone" in category.products
+
+
+def test_add_product_lawn_grass():
+    """Проверка добавления наследника LawnGrass."""
+    category = Category("Test", "Desc", [])
+    grass = LawnGrass("Трава", "Desc", 500.0, 100, "Россия", "14 дней", "Зеленый")
+
+    category.add_product(grass)
+
+    assert Category.product_count == 1
+    assert "Трава" in category.products
+
+
+def test_add_product_invalid_type():
+    """Проверка, что нельзя добавить объект неподходящего типа."""
+    category = Category("Test", "Desc", [])
+
+    # Пытаемся добавить строку
+    with pytest.raises(TypeError) as exc_info:
+        category.add_product("Это строка, а не продукт")
+
+    assert "Нельзя добавить объект типа str" in str(exc_info.value)

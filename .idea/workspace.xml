@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ae653e3-a633-4a89-b2d6-1ad5fedefe88" name="Changes" comment="refactoring with linters and test coverage">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="3ae653e3-a633-4a89-b2d6-1ad5fedefe88" name="Changes" comment="new coverage">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htmlcov/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/htmlcov/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/homework_16_1" />
+        <entry key="$PROJECT_DIR$" value="develope" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -58,7 +59,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "#4 on feature/homework__16__1",
     "last_opened_file_path": "C:/Users/User/PycharmProjects/oop_project/data",
     "node.js.detected.package.jshint": "true",
     "node.js.selected.package.jshint": "",
@@ -70,7 +71,7 @@
       <recent name="C:\Users\User\PycharmProjects\oop_project\data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python tests.Python tests in test_category.py">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="oop-project" />
       <option name="ENV_FILES" value="" />
@@ -93,6 +94,23 @@
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for tests.test_product.test_new_product_merge" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="oop-project" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <option name="RUN_TOOL" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.test_product.test_new_product_merge&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="Python tests in test_category.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
@@ -131,7 +149,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests in test_category.py" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python tests.Python tests in test_product.py" />
         <item itemvalue="Python tests.Python tests in test_product.py" />
         <item itemvalue="Python tests.Python tests in test_category.py" />
       </list>
@@ -208,7 +228,71 @@
       <option name="project" value="LOCAL" />
       <updated>1794718648046</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added new class CategoryIterator">
+      <option name="closed" value="true" />
+      <created>1795204895458</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1795204895458</updated>
+    </task>
+    <task id="LOCAL-00009" summary="added new classes Smartphone and LawnGrass">
+      <option name="closed" value="true" />
+      <created>1795205627176</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1795205627176</updated>
+    </task>
+    <task id="LOCAL-00010" summary="change __add__ function">
+      <option name="closed" value="true" />
+      <created>1795206209032</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1795206209032</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add new tests">
+      <option name="closed" value="true" />
+      <created>1795207386740</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1795207386740</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Checked with linters">
+      <option name="closed" value="true" />
+      <created>1795207511780</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1795207511780</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Change README.md">
+      <option name="closed" value="true" />
+      <created>1795207727594</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1795207727594</updated>
+    </task>
+    <task id="LOCAL-00014" summary="add coverage">
+      <option name="closed" value="true" />
+      <created>1795246415521</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1795246415521</updated>
+    </task>
+    <task id="LOCAL-00015" summary="new coverage">
+      <option name="closed" value="true" />
+      <created>1795246922416</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1795246922416</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,6 +317,14 @@
     <MESSAGE value="add tests" />
     <MESSAGE value="add readers.py" />
     <MESSAGE value="refactoring with linters and test coverage" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring with linters and test coverage" />
+    <MESSAGE value="added new class CategoryIterator" />
+    <MESSAGE value="added new classes Smartphone and LawnGrass" />
+    <MESSAGE value="change __add__ function" />
+    <MESSAGE value="add new tests" />
+    <MESSAGE value="Checked with linters" />
+    <MESSAGE value="Change README.md" />
+    <MESSAGE value="add coverage" />
+    <MESSAGE value="new coverage" />
+    <option name="LAST_COMMIT_MESSAGE" value="new coverage" />
   </component>
 </project>

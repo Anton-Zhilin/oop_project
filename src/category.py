@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
-from src.product import Product
 from src.exceptions import ZeroQuantityError
+from src.product import Product
 
 
 class AbstractCategory(ABC):
@@ -104,9 +104,7 @@ class Order(AbstractCategory):
 
         try:
             if not isinstance(product, Product):
-                raise TypeError(
-                    f"Нельзя создать заказ с объектом типа {type(product).__name__}."
-                )
+                raise TypeError(f"Нельзя создать заказ с объектом типа {type(product).__name__}.")
 
             if quantity == 0:
                 raise ZeroQuantityError()

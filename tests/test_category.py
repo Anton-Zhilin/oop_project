@@ -1,8 +1,8 @@
 import pytest
 
 from src.category import AbstractCategory, Category, Order
-from src.product import LawnGrass, Product, Smartphone
 from src.exceptions import ZeroQuantityError
+from src.product import LawnGrass, Product, Smartphone
 
 
 def test_category_initialization():
@@ -190,7 +190,6 @@ def test_add_product_success_messages(capsys):
     captured = capsys.readouterr()
     assert "Товар Телефон добавлен в категорию Test." in captured.out
     assert "Обработка добавления товара в категорию 'Test' завершена." in captured.out
-
 
 
 def test_order_success_messages(capsys):

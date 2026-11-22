@@ -120,20 +120,19 @@ class Smartphone(Product):
     """Класс, представляющий смартфон (наследник Product)."""
 
     def __init__(
-            self,
-            name: str,
-            description: str,
-            price: float,
-            quantity: int,
-            efficiency: float,
-            model: str,
-            memory: float,
-            color: str,
+        self,
+        name: str,
+        description: str,
+        price: float,
+        quantity: int,
+        efficiency: float,
+        model: str,
+        memory: float,
+        color: str,
     ) -> None:
         # Передаем все аргументы через super(), уникальные — как kwargs
         super().__init__(
-            name, description, price, quantity,
-            efficiency=efficiency, model=model, memory=memory, color=color
+            name, description, price, quantity, efficiency=efficiency, model=model, memory=memory, color=color
         )
         # Инициализация уникальных атрибутов
         self.efficiency = efficiency
@@ -146,19 +145,18 @@ class LawnGrass(Product):
     """Класс, представляющий газонную траву (наследник Product)."""
 
     def __init__(
-            self,
-            name: str,
-            description: str,
-            price: float,
-            quantity: int,
-            country: str,
-            germination_period: str,
-            color: str,
+        self,
+        name: str,
+        description: str,
+        price: float,
+        quantity: int,
+        country: str,
+        germination_period: str,
+        color: str,
     ) -> None:
         # Передаем все аргументы через super(), уникальные — как kwargs
         super().__init__(
-            name, description, price, quantity,
-            country=country, germination_period=germination_period, color=color
+            name, description, price, quantity, country=country, germination_period=germination_period, color=color
         )
         # Инициализация уникальных атрибутов
         self.country = country

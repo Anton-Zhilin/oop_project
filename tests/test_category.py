@@ -144,3 +144,34 @@ def test_category_and_order_are_abstract_subclasses():
     """Проверка, что Category и Order — наследники AbstractCategory."""
     assert issubclass(Category, AbstractCategory)
     assert issubclass(Order, AbstractCategory)
+
+
+def test_middle_price_with_products():
+    """Проверка подсчёта средней цены при наличии товаров."""
+    p1 = Product("Телефон", "Описание", 10000.0, 5)
+    p2 = Product("Ноутбук", "Описание", 20000.0, 3)
+    p3 = Product("Планшет", "Описание", 30000.0, 2)
+
+    category = Category("Электроника", "Техника", [p1, p2, p3])
+
+    # (10000 + 20000 + 30000) / 3 = 20000
+    assert category.middle_price() == 20000.0
+
+
+def test_middle_price_single_product():
+    """Проверка средней цены при одном товаре."""
+    p1 = Product("Телефон", "Описание", 15000.0, 5)
+    category = Category("Смартфоны", "Техника", [p1])
+
+    assert category.middle_price() == 15000.0
+
+
+def test_middle_price_empty_category():
+    """
+    Проверка, что для пустой категории возвращается 0
+    (обрабатывается ZeroDivisionError).
+    """
+    category = Category("Пустая категория", "Без товаров", [])
+
+    assert category.middle_price() == 0
+

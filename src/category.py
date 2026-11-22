@@ -43,6 +43,17 @@ class Category(AbstractCategory):
         self.__products.append(product)
         Category.product_count += 1
 
+    def middle_price(self) -> float:
+        """
+        Возвращает среднюю цену всех товаров в категории.
+        Если товаров нет — возвращает 0.
+        """
+        try:
+            total_price = sum(product.price for product in self.__products)
+            return total_price / len(self.__products)
+        except ZeroDivisionError:
+            return 0
+
     @property
     def products(self) -> str:
         """
@@ -97,3 +108,4 @@ class Order(AbstractCategory):
             f"количество: {self.__quantity} шт., "
             f"итоговая стоимость: {self.total_price} руб."
         )
+

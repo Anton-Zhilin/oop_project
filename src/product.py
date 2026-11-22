@@ -1,6 +1,24 @@
 from abc import ABC, abstractmethod
 
 
+class MixinRepr:
+    """
+    Класс-миксин для вывода информации о создании объекта.
+    При инициализации выводит в консоль имя класса и переданные параметры.
+    """
+
+    def __init__(self, *args, **kwargs):
+        # Сначала вызываем __init__ следующего класса в MRO
+        super().__init__(*args, **kwargs)
+
+        # Формируем строку с параметрами
+        params = [repr(arg) for arg in args]
+        params += [f"{key}={repr(value)}" for key, value in kwargs.items()]
+
+        # Выводим информацию о создании объекта
+        print(f"{self.__class__.__name__}({', '.join(params)})")
+
+
 class BaseProduct(ABC):
     """Абстрактный базовый класс для всех продуктов."""
 
@@ -62,7 +80,7 @@ class BaseProduct(ABC):
         return (self.price * self.quantity) + (other.price * other.quantity)
 
 
-class Product(BaseProduct):
+class Product(MixinRepr, BaseProduct):
     """Класс, представляющий товар (конкретная реализация BaseProduct)."""
 
     def __init__(self, name: str, description: str, price: float, quantity: int) -> None:
@@ -94,17 +112,17 @@ class Smartphone(Product):
     """Класс, представляющий смартфон (наследник Product)."""
 
     def __init__(
-        self,
-        name: str,
-        description: str,
-        price: float,
-        quantity: int,
-        efficiency: float,
-        model: str,
-        memory: float,
-        color: str,
+            self,
+            name: str,
+            description: str,
+            price: float,
+            quantity: int,
+            efficiency: float,
+            model: str,
+            memory: float,
+            color: str,
     ) -> None:
-        super().__init__(name, description, price, quantity)
+        super().__init__(name, description, price, quantity, efficiency, model, memory, color)
         self.efficiency = efficiency
         self.model = model
         self.memory = memory
@@ -115,16 +133,16 @@ class LawnGrass(Product):
     """Класс, представляющий газонную траву (наследник Product)."""
 
     def __init__(
-        self,
-        name: str,
-        description: str,
-        price: float,
-        quantity: int,
-        country: str,
-        germination_period: str,
-        color: str,
+            self,
+            name: str,
+            description: str,
+            price: float,
+            quantity: int,
+            country: str,
+            germination_period: str,
+            color: str,
     ) -> None:
-        super().__init__(name, description, price, quantity)
+        super().__init__(name, description, price, quantity, country, germination_period, color)
         self.country = country
         self.germination_period = germination_period
         self.color = color

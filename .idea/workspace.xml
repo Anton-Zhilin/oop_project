@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ae653e3-a633-4a89-b2d6-1ad5fedefe88" name="Changes" comment="change gitignore">
+    <list default="true" id="3ae653e3-a633-4a89-b2d6-1ad5fedefe88" name="Changes" comment="add class BaseProduct">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/htmlcov/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/htmlcov/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/product.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/product.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -293,7 +292,15 @@
       <option name="project" value="LOCAL" />
       <updated>1795246922416</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="add class BaseProduct">
+      <option name="closed" value="true" />
+      <created>1795346496288</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1795346496288</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,6 +333,7 @@
     <MESSAGE value="Change README.md" />
     <MESSAGE value="add coverage" />
     <MESSAGE value="new coverage" />
-    <option name="LAST_COMMIT_MESSAGE" value="new coverage" />
+    <MESSAGE value="add class BaseProduct" />
+    <option name="LAST_COMMIT_MESSAGE" value="add class BaseProduct" />
   </component>
 </project>

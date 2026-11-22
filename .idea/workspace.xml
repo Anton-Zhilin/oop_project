@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ae653e3-a633-4a89-b2d6-1ad5fedefe88" name="Changes" comment="add coverage">
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    <list default="true" id="3ae653e3-a633-4a89-b2d6-1ad5fedefe88" name="Changes" comment="check with linters">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/product.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/product.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/readers.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/readers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_category.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_category.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_product.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_product.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,7 +75,7 @@
       <recent name="C:\Users\User\PycharmProjects\oop_project\data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python tests.Python tests in test_product.py">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="oop-project" />
       <option name="ENV_FILES" value="" />
@@ -172,8 +170,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
         <item itemvalue="Python tests.Python tests in test_product.py" />
+        <item itemvalue="Python.main" />
         <item itemvalue="Python tests.Python tests for tests.test_product.test_mixin_repr_multiple_objects" />
         <item itemvalue="Python tests.Python tests for tests.test_product.test_mixin_repr_lawn_grass" />
         <item itemvalue="Python tests.Python tests for tests.test_product.test_mixin_repr_smartphone" />
@@ -347,7 +345,15 @@
       <option name="project" value="LOCAL" />
       <updated>1795348898605</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="check with linters">
+      <option name="closed" value="true" />
+      <created>1795349421434</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1795349421434</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -382,6 +388,7 @@
     <MESSAGE value="add MixinRepr" />
     <MESSAGE value="add new tests" />
     <MESSAGE value="add coverage" />
-    <option name="LAST_COMMIT_MESSAGE" value="add coverage" />
+    <MESSAGE value="check with linters" />
+    <option name="LAST_COMMIT_MESSAGE" value="check with linters" />
   </component>
 </project>

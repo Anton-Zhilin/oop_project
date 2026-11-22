@@ -119,29 +119,36 @@ def test_product_add_parent_and_child_type_error():
 
 def test_mixin_repr_product(capsys):
     """Проверка вывода информации о создании объекта Product."""
-    product = Product("Продукт1", "Описание продукта", 1200, 10)
+    # Не присваиваем переменной, так как проверяем только вывод в консоль (исправляет F841)
+    Product("Продукт1", "Описание продукта", 1200, 10)
 
     captured = capsys.readouterr()
-    expected_output = "Product('Продукт1', 'Описание продукта', 1200, 10)\n"
-
-    assert captured.out == expected_output
+    assert captured.out == "Product('Продукт1', 'Описание продукта', 1200, 10)\n"
 
 
 def test_mixin_repr_smartphone(capsys):
     """Проверка вывода информации о создании объекта Smartphone."""
-    smartphone = Smartphone("iPhone 15", "512GB", 210000.0, 8, 95.5, "iPhone 15", 512.0, "Gray")
+    Smartphone("iPhone 15", "512GB", 210000.0, 8, 95.5, "iPhone 15", 512.0, "Gray")
 
     captured = capsys.readouterr()
-    expected_output = "Smartphone('iPhone 15', '512GB', 210000.0, 8, efficiency=95.5, model='iPhone 15', memory=512.0, color='Gray')\n"
+    # Разбиваем длинную строку на части для соответствия PEP 8 (исправляет E501)
+    expected_output = (
+        "Smartphone('iPhone 15', '512GB', 210000.0, 8, "
+        "efficiency=95.5, model='iPhone 15', memory=512.0, color='Gray')\n"
+    )
 
     assert captured.out == expected_output
 
 
 def test_mixin_repr_lawn_grass(capsys):
     """Проверка вывода информации о создании объекта LawnGrass."""
-    grass = LawnGrass("Трава газонная", "Для газона", 500.0, 100, "Россия", "14 дней", "Зеленый")
+    LawnGrass("Трава газонная", "Для газона", 500.0, 100, "Россия", "14 дней", "Зеленый")
 
     captured = capsys.readouterr()
-    expected_output = "LawnGrass('Трава газонная', 'Для газона', 500.0, 100, country='Россия', germination_period='14 дней', color='Зеленый')\n"
+    # Разбиваем длинную строку на части для соответствия PEP 8 (исправляет E501)
+    expected_output = (
+        "LawnGrass('Трава газонная', 'Для газона', 500.0, 100, "
+        "country='Россия', germination_period='14 дней', color='Зеленый')\n"
+    )
 
     assert captured.out == expected_output

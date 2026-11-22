@@ -75,7 +75,8 @@ class BaseProduct(ABC):
         Сложение двух товаров: возвращает общую стоимость всех товаров на складе.
         Складывать можно только товары одинаковых классов.
         """
-        if type(self) != type(other):
+        # Используем 'is not' вместо '!=' для сравнения типов (исправляет E721)
+        if type(self) is not type(other):
             raise TypeError("Можно складывать только товары одинаковых классов")
 
         return (self.price * self.quantity) + (other.price * other.quantity)

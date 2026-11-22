@@ -2,6 +2,7 @@ import pytest
 
 from src.category import AbstractCategory, Category, Order
 from src.product import LawnGrass, Product, Smartphone
+from src.exceptions import ZeroQuantityError
 
 
 def test_category_initialization():
@@ -175,3 +176,38 @@ def test_middle_price_empty_category():
 
     assert category.middle_price() == 0
 
+
+def test_add_product_success_messages(capsys):
+    """
+    Проверка, что при успешном добавлении товара
+    выводятся сообщения об успехе и завершении обработки.
+    """
+    category = Category("Test", "Desc", [])
+    product = Product("Телефон", "Описание", 50000.0, 5)
+
+    category.add_product(product)
+
+    captured = capsys.readouterr()
+    assert "Товар Телефон добавлен в категорию Test." in captured.out
+    assert "Обработка добавления товара в категорию 'Test' завершена." in captured.out
+
+
+
+def test_order_success_messages(capsys):
+    """
+    Проверка, что при успешном создании заказа
+    выводятся сообщения об успехе и завершении обработки.
+    """
+    product = Product("Телефон", "Описание", 50000.0, 5)
+
+    Order("Заказ №1", "Покупка", product, 2)
+
+    captured = capsys.readouterr()
+    assert "Товар Телефон добавлен в заказ Заказ №1." in captured.out
+    assert "Обработка добавления товара в заказ 'Заказ №1' завершена." in captured.out
+
+
+def test_zero_quantity_error_default_message():
+    """Проверка сообщения по умолчанию."""
+    error = ZeroQuantityError()
+    assert error.message == "Товар с нулевым количеством не может быть добавлен."

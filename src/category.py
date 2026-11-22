@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 
 from src.product import Product
+from src.exceptions import ZeroQuantityError
 
 
 class AbstractCategory(ABC):
@@ -32,16 +33,36 @@ class Category(AbstractCategory):
     def add_product(self, product: Product) -> None:
         """
         Добавляет продукт в приватный список товаров.
-        Проверяет, что product является экземпляром Product или его наследника.
+        Проверяет тип продукта и его количество.
         """
-        if not isinstance(product, Product):
-            raise TypeError(
-                f"Нельзя добавить объект типа {type(product).__name__}. "
-                "Можно добавлять только объекты класса Product или его наследников."
-            )
+        try:
+            # Проверка типа продукта
+            if not isinstance(product, Product):
+                raise TypeError(
+                    f"Нельзя добавить объект типа {type(product).__name__}. "
+                    "Можно добавлять только объекты класса Product или его наследников."
+                )
 
-        self.__products.append(product)
-        Category.product_count += 1
+            # Проверка количества товара
+            if product.quantity == 0:
+                raise ZeroQuantityError()
+
+            # Если все проверки пройдены — добавляем товар
+            self.__products.append(product)
+            Category.product_count += 1
+            print(f"Товар {product.name} добавлен в категорию {self.name}.")
+
+        except ZeroQuantityError as e:
+            print(f"Ошибка: {e.message}")
+            raise
+
+        except TypeError as e:
+            print(f"Ошибка типа: {e}")
+            raise
+
+        finally:
+            # Выполняется в любом случае — и при успехе, и при ошибке
+            print(f"Обработка добавления товара в категорию '{self.name}' завершена.")
 
     def middle_price(self) -> float:
         """
@@ -80,8 +101,30 @@ class Order(AbstractCategory):
 
     def __init__(self, name: str, description: str, product: Product, quantity: int) -> None:
         super().__init__(name, description)
-        self.__product = product
-        self.__quantity = quantity
+
+        try:
+            if not isinstance(product, Product):
+                raise TypeError(
+                    f"Нельзя создать заказ с объектом типа {type(product).__name__}."
+                )
+
+            if quantity == 0:
+                raise ZeroQuantityError()
+
+            self.__product = product
+            self.__quantity = quantity
+            print(f"Товар {product.name} добавлен в заказ {self.name}.")
+
+        except ZeroQuantityError as e:
+            print(f"Ошибка: {e.message}")
+            raise
+
+        except TypeError as e:
+            print(f"Ошибка типа: {e}")
+            raise
+
+        finally:
+            print(f"Обработка добавления товара в заказ '{self.name}' завершена.")
 
     @property
     def product(self) -> Product:
@@ -108,4 +151,3 @@ class Order(AbstractCategory):
             f"количество: {self.__quantity} шт., "
             f"итоговая стоимость: {self.total_price} руб."
         )
-

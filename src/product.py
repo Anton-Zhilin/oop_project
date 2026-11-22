@@ -23,12 +23,13 @@ class BaseProduct(ABC):
     """Абстрактный базовый класс для всех продуктов."""
 
     @abstractmethod
-    def __init__(self, name: str, description: str, price: float, quantity: int) -> None:
+    def __init__(self, name: str, description: str, price: float, quantity: int, **kwargs) -> None:
         """Инициализация общих атрибутов продукта."""
         self.name = name
         self.description = description
         self.price = price  # Вызывает сеттер
         self.quantity = quantity
+        # kwargs игнорируются — они нужны только для передачи через цепочку наследования
 
     @property
     @abstractmethod
@@ -83,8 +84,15 @@ class BaseProduct(ABC):
 class Product(MixinRepr, BaseProduct):
     """Класс, представляющий товар (конкретная реализация BaseProduct)."""
 
-    def __init__(self, name: str, description: str, price: float, quantity: int) -> None:
-        super().__init__(name, description, price, quantity)
+    def __init__(self, name: str, description: str, price: float, quantity: int, **kwargs) -> None:
+        # Передаем все аргументы (включая kwargs) через цепочку наследования
+        super().__init__(name, description, price, quantity, **kwargs)
+
+        # Инициализация атрибутов Product
+        self.name = name
+        self.description = description
+        self.price = price  # Вызывает сеттер
+        self.quantity = quantity
 
     @property
     def price(self) -> float:
@@ -122,7 +130,12 @@ class Smartphone(Product):
             memory: float,
             color: str,
     ) -> None:
-        super().__init__(name, description, price, quantity, efficiency, model, memory, color)
+        # Передаем все аргументы через super(), уникальные — как kwargs
+        super().__init__(
+            name, description, price, quantity,
+            efficiency=efficiency, model=model, memory=memory, color=color
+        )
+        # Инициализация уникальных атрибутов
         self.efficiency = efficiency
         self.model = model
         self.memory = memory
@@ -142,7 +155,12 @@ class LawnGrass(Product):
             germination_period: str,
             color: str,
     ) -> None:
-        super().__init__(name, description, price, quantity, country, germination_period, color)
+        # Передаем все аргументы через super(), уникальные — как kwargs
+        super().__init__(
+            name, description, price, quantity,
+            country=country, germination_period=germination_period, color=color
+        )
+        # Инициализация уникальных атрибутов
         self.country = country
         self.germination_period = germination_period
         self.color = color

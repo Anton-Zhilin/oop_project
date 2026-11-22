@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ae653e3-a633-4a89-b2d6-1ad5fedefe88" name="Changes" comment="add class BaseProduct">
+    <list default="true" id="3ae653e3-a633-4a89-b2d6-1ad5fedefe88" name="Changes" comment="add MixinRepr">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htmlcov/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/htmlcov/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/product.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/product.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_category.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_category.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_product.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_product.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,29 +52,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python tests.Python tests in test_category.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_product.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/homework__16__2&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/PycharmProjects/oop_project/data&quot;,
-    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python tests.Python tests for tests.test_product.test_mixin_repr_lawn_grass.executor": "Run",
+    "Python tests.Python tests for tests.test_product.test_mixin_repr_multiple_objects.executor": "Run",
+    "Python tests.Python tests for tests.test_product.test_mixin_repr_smartphone.executor": "Run",
+    "Python tests.Python tests in test_category.py.executor": "Run",
+    "Python tests.Python tests in test_product.py.executor": "Run",
+    "Python.main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "feature/homework__16__2",
+    "last_opened_file_path": "C:/Users/User/PycharmProjects/oop_project/data",
+    "node.js.detected.package.jshint": "true",
+    "node.js.selected.package.jshint": "",
+    "nodejs_package_manager_path": "npm"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\PycharmProjects\oop_project\data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python tests.Python tests in test_product.py">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="oop-project" />
       <option name="ENV_FILES" value="" />
@@ -96,7 +102,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for tests.test_product.test_new_product_merge" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for tests.test_product.test_mixin_repr_lawn_grass" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="oop-project" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -109,11 +115,11 @@
       <option name="DEBUG_JUST_MY_CODE" value="false" />
       <option name="RUN_TOOL" value="" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.test_product.test_new_product_merge&quot;" />
+      <option name="_new_target" value="&quot;tests.test_product.test_mixin_repr_lawn_grass&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in test_category.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for tests.test_product.test_mixin_repr_multiple_objects" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="oop-project" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -126,8 +132,25 @@
       <option name="DEBUG_JUST_MY_CODE" value="false" />
       <option name="RUN_TOOL" value="" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_category.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="_new_target" value="&quot;tests.test_product.test_mixin_repr_multiple_objects&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for tests.test_product.test_mixin_repr_smartphone" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="oop-project" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <option name="RUN_TOOL" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.test_product.test_mixin_repr_smartphone&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="Python tests in test_product.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
@@ -149,11 +172,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests in test_product.py" />
+        <item itemvalue="Python tests.Python tests for tests.test_product.test_mixin_repr_multiple_objects" />
+        <item itemvalue="Python tests.Python tests for tests.test_product.test_mixin_repr_lawn_grass" />
+        <item itemvalue="Python tests.Python tests for tests.test_product.test_mixin_repr_smartphone" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python tests.Python tests in test_product.py" />
-        <item itemvalue="Python tests.Python tests in test_category.py" />
-        <item itemvalue="Python tests.Python tests for tests.test_product.test_new_product_merge" />
-        <item itemvalue="Python tests.Python tests in test_product.py" />
       </list>
     </recent_temporary>
   </component>
@@ -300,7 +323,15 @@
       <option name="project" value="LOCAL" />
       <updated>1795346496288</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="add MixinRepr">
+      <option name="closed" value="true" />
+      <created>1795347096414</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1795347096414</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,6 +365,7 @@
     <MESSAGE value="add coverage" />
     <MESSAGE value="new coverage" />
     <MESSAGE value="add class BaseProduct" />
-    <option name="LAST_COMMIT_MESSAGE" value="add class BaseProduct" />
+    <MESSAGE value="add MixinRepr" />
+    <option name="LAST_COMMIT_MESSAGE" value="add MixinRepr" />
   </component>
 </project>

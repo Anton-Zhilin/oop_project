@@ -1,6 +1,6 @@
 import pytest
 
-from src.category import Category
+from src.category import AbstractCategory, Category, Order
 from src.product import LawnGrass, Product, Smartphone
 
 
@@ -105,3 +105,42 @@ def test_category_count():
 
     Category("Cat2", "Desc2", [])
     assert Category.category_count == 2
+
+
+def test_order_initialization():
+    """Проверка корректной инициализации заказа."""
+    product = Product("Телефон", "Описание", 50000.0, 10)
+    order = Order("Заказ №1", "Покупка телефона", product, 3)
+
+    assert order.name == "Заказ №1"
+    assert order.description == "Покупка телефона"
+    assert order.product is product
+    assert order.quantity == 3
+
+
+def test_order_total_price():
+    """Проверка вычисления итоговой стоимости заказа."""
+    product = Product("Телефон", "Описание", 50000.0, 10)
+    order = Order("Заказ №1", "Покупка", product, 3)
+
+    # 50000 * 3 = 150000
+    assert order.total_price == 150000.0
+
+
+def test_order_str():
+    """Проверка строкового представления заказа."""
+    product = Product("Телефон", "Описание", 50000.0, 10)
+    order = Order("Заказ №1", "Покупка телефона", product, 2)
+
+    expected = (
+        "Заказ №1, описание: 'Покупка телефона', "
+        "товар: Телефон, количество: 2 шт., "
+        "итоговая стоимость: 100000.0 руб."
+    )
+    assert str(order) == expected
+
+
+def test_category_and_order_are_abstract_subclasses():
+    """Проверка, что Category и Order — наследники AbstractCategory."""
+    assert issubclass(Category, AbstractCategory)
+    assert issubclass(Order, AbstractCategory)

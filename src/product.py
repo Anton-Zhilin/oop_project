@@ -86,6 +86,10 @@ class Product(MixinRepr, BaseProduct):
     """Класс, представляющий товар (конкретная реализация BaseProduct)."""
 
     def __init__(self, name: str, description: str, price: float, quantity: int, **kwargs) -> None:
+        # Проверка на нулевое количество ДО инициализации объекта
+        if quantity == 0:
+            raise ValueError("Товар с нулевым количеством не может быть добавлен.")
+
         # Передаем все аргументы (включая kwargs) через цепочку наследования
         super().__init__(name, description, price, quantity, **kwargs)
 

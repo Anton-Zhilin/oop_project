@@ -152,3 +152,24 @@ def test_mixin_repr_lawn_grass(capsys):
     )
 
     assert captured.out == expected_output
+
+
+def test_product_zero_quantity_raises_value_error():
+    """
+    Проверка, что создание товара с нулевым количеством
+    вызывает ValueError с правильным сообщением.
+    """
+    with pytest.raises(ValueError) as exc_info:
+        Product("Test Product", "Test Description", 100.0, 0)
+
+    assert "Товар с нулевым количеством не может быть добавлен." in str(exc_info.value)
+
+
+def test_product_zero_quantity_smartphone_raises_value_error():
+    """
+    Проверка, что проверка работает и для наследников (Smartphone).
+    """
+    with pytest.raises(ValueError) as exc_info:
+        Smartphone("iPhone", "Описание", 100000.0, 0, 90.0, "15", 256, "Gray")
+
+    assert "Товар с нулевым количеством не может быть добавлен." in str(exc_info.value)
